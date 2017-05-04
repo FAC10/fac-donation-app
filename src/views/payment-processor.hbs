@@ -1,1 +1,21 @@
-<h1>blah blah blah</h1>
+<div class="test">
+
+  <form action="/charge" method="post" id="payment-form">
+    <div class="form-row">
+      <label for="card-element">
+        Credit or debit card
+      </label>
+      <div id="card-element">
+        <!-- a Stripe Element will be inserted here. -->
+      </div>
+
+      <!-- Used to display form errors -->
+      <div id="card-errors"></div>
+    </div>
+
+    <button>Submit Payment</button>
+  </form>
+
+  <script src="./lib/payment-processor.js"></script>
+
+</div>
