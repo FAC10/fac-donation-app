@@ -12,3 +12,15 @@ test('test that the home route returns a status code of 200', (t) => {
     t.end();
   });
 });
+
+test('test that the payment-processor route returns a status code of 200', (t) => {
+  const options = {
+    method: 'GET',
+    url: '/payment-processor',
+  };
+
+  server.inject(options, (res) => {
+    t.equal(res.statusCode, 200, 'should return status code of 200');
+    t.end();
+  });
+});
