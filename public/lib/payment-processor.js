@@ -29,15 +29,15 @@ var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  stripe.createToken(card).then(function(result) {
-    console.log(result);
-    if (result.error) {
+  stripe.createToken(card)
+    .then(function(result) {
+      console.log(result);
+      stripeTokenHandler(result.token);
+    })
+    .catch(function(error) {
       var errorElement = document.getElementById('card-errors');
       errorElement.textContent = result.error.message;
-    } else {
-      stripeTokenHandler(result.token);
-    }
-  });
+    });
 });
 
 function stripeTokenHandler(token) {

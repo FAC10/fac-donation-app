@@ -1,6 +1,6 @@
 const stripe = require('stripe')('sk_test_kpL5gpuCaeBdV72eIA3lZi1Z');
 
-function stripeCharge(req) {
+const stripeCharge = (req, callback) => {
   const token = req.payload.stripeToken;
 
 // this function takes a object and a callback
@@ -10,6 +10,12 @@ function stripeCharge(req) {
     description: 'example charge',
     source: token,
   }, (err, charge) => {
+    console.log(err);
+    if (err) {
+      return callback(err, null);
+    } else {
+      return callback(null, charge);
+    }
     // asynchronously called
     console.log(charge, 'this is the charge object');
   }
