@@ -35,13 +35,13 @@ test('test that the charge route returns a status of 200', (t) => {
     payload: 'tok_1AG4BDDelOQugZzA6ymsuMQp',
   };
 
-  stripeCharge((err, reply) => {
+  stripeCharge((req) => {
     server.inject(options, (res) => {
       console.log(res);
       t.equal(res.statusCode, 200, 'should return a status code of 200');
-      t.end();
     });
   });
+  t.end();
 });
 
 

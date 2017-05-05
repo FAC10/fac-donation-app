@@ -6,6 +6,6 @@ module.exports = {
   handler: (req, reply) => {
     // console.log(req.payload);
     reply('you are on the charges page. give us ur dolla');
-    stripeCharge(req, reply);
+    stripeCharge(req);
   },
 };

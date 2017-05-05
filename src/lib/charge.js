@@ -1,6 +1,6 @@
 const stripe = require('stripe')('sk_test_kpL5gpuCaeBdV72eIA3lZi1Z');
 
-function stripeCharge(req, reply) {
+function stripeCharge(req) {
   const token = req.payload.stripeToken;
 
 // this function takes a object and a callback
