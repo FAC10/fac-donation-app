@@ -39,3 +39,13 @@ form.addEventListener('submit', function(event) {
     }
   });
 });
+
+function stripeTokenHandler(token) {
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+
+  form.submit();
+}
