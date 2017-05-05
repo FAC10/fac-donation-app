@@ -24,3 +24,18 @@ card.addEventListener('change', function(event) {
     displayError.textContent = '';
   }
 });
+
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    console.log(result);
+    if (result.error) {
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+      stripeTokenHandler(result.token);
+    }
+  });
+});
