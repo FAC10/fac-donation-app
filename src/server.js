@@ -3,6 +3,7 @@ const inert = require('inert');
 const vision = require('vision');
 const handlebars = require('./handlebars');
 const routes = require('./routes');
+require('env2')('./config.env');
 
 const server = new hapi.Server();
 
