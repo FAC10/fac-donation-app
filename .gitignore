@@ -38,3 +38,6 @@ jspm_packages
 
 # Config file
 config.env
+
+# .DS_Store
+.DS_Store
