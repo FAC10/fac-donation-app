@@ -1,7 +1,10 @@
 module.exports = {
   method: 'GET',
   path: '/',
-  handler: (req, reply) => {
-    reply.view('index');
+  config: {
+    auth: false,
+    handler: (req, reply) => {
+      reply.view('index');
+    },
   },
 };
