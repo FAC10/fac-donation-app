@@ -12,7 +12,7 @@ module.exports = {
         console.log('body', body);
 
         req.cookieAuth.set({ accessToken });
-        reply('hey you have returned from github!');
+        reply.view('profile-select-relation');
       });
     },
   },

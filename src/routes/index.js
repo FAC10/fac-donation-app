@@ -9,4 +9,7 @@ module.exports = [
   require('./returning-user-home'),
   require('./donation-one-off'),
   require('./donation-regular'),
+  require('./profile-select-cohort'),
+  require('./profile-complete'),
+  require('./donation-first-time-user'),
 ];
