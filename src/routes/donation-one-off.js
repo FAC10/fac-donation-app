@@ -3,5 +3,5 @@ module.exports = {
   path: '/donation-one-off',
   handler: (req, reply) => {
     reply.view('donation-one-off');
-  }
+  },
 }
