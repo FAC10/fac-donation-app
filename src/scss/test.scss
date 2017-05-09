@@ -1,0 +1,15 @@
+$test: #bada55;
+$buttontest: pink;
+
+body {
+  margin: 0;
+  background-color: $test;
+}
+
+
+.test-button {
+  background-color: $buttontest;
+  min-width: 100px;
+  min-height: 100px;
+  color: red;
+}
