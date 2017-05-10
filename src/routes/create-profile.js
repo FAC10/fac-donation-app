@@ -39,7 +39,7 @@ module.exports = {
               id: parsedBody.id,
               name: parsedBody.name,
             });
-            reply({ credentials: req.auth.credentials }).redirect('/profile-select-relation');
+            reply().redirect('/profile-select-relation');
           });
         });
       });
