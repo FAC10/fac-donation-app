@@ -17,21 +17,19 @@ postData.insertGithubUser = (username, avatar_url, gitHubId, gitHubName, cb) => 
   });
 };
 
-postData.insertIntoDatabase = (reqPayload, credentials, callback) => {
-  db_connection.query(`SELECT users.id FROM users WHERE users.username = '${credentials.username}'`, (err, dbResponse) => {
+postData.insertFACRelation = (reqPayload, credentials, callback) => {
+
+  const query = `UPDATE users SET fac_relation = '${reqPayload.relation}' WHERE github_username = '${credentials.username}'`;
+
+  db_connection.query(query, (err, res) => {
     if (err) {
-      return callback(err);
+      console.log('threw an error', err)
+      return callback(err, null);
+    } else {
+      callback(null, res)
     }
-    const id = dbResponse.rows[0].id;
-    const query = `INSERT INTO blogposts(title, body, username)
-      VALUES ('${reqPayload.title}','${reqPayload.content}',${id})`;
-    db_connection.query(query, (err, dbResponse) => {
-      if (err) {
-        return callback(err);
-      }
-      callback(null, dbResponse);
-    });
   });
-};
+
+}
 
 module.exports = postData;
