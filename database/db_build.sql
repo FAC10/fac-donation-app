@@ -20,8 +20,4 @@ CREATE TABLE users (
   stripe_id            VARCHAR(200)
 );
 
-INSERT INTO users VALUES
-(1, 'Joey Scott', 'https://avatars1.githubusercontent.com/u/11914321?v=3', 11914321, 'joeylouise', 'FAC10', 'alumni', 'London', '234fdsfvsdfg234fdg324')
-RETURNING ID;
-
 COMMIT;

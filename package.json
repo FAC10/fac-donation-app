@@ -5,7 +5,7 @@
   "main": "start.js",
   "scripts": {
     "start": "parallelshell 'npm run serve' 'npm run css'",
-    "serve": "nodemon start.js",
+    "serve": "nodemon start.js -e 'js, css, html, hbs'",
     "precss": "node-sass src/scss/main.scss --output-style compressed  -o public",
     "css": "node-sass src/scss/main.scss --output-style compressed  -wo public",
     "test": "tape tests/src/test.js | tap-spec",

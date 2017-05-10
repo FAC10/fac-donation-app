@@ -10,6 +10,7 @@ module.exports = [
   require('./donation-one-off'),
   require('./donation-regular'),
   require('./profile-select-cohort'),
+  require('./profile-select-relation'),
   require('./profile-complete'),
   require('./donation-first-time-user'),
 ];
