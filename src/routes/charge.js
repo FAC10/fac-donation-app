@@ -21,7 +21,7 @@ module.exports = {
       } else if (result === false) {
         // create customer id and charge user
         createNewCustomer(stripeToken, (err, result) => {
-          const stripe_id = result.id;
+          const stripe_id = result;
           if (err) {
             reply('unable to create new customer');
           } else {
@@ -31,6 +31,7 @@ module.exports = {
               } else {
                 chargeRepeatCustomer(stripe_id, (err, result) => {
                   if (err) {
+                    console.log(err);
                     reply('unable to charge user');
                   } else {
                     reply('success1!!!');
