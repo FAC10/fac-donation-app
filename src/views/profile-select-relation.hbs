@@ -10,11 +10,17 @@
 <section>
   <header>Are you an alumni or a friend?</header>
   <article class="donor-type donor-type--alum">
-    <img src="" alt="Alumni icon">
+    <form action="/profile-select-cohort"  method="post">
+      <input type="image" name="relation" value="alumni" alt="Alumni icon">
+    </input>
     <p>I'm an Alum</p>
+    </form>
   </article>
+
   <article class="donor-type donor-type--friend">
-    <img src="" alt="Friend icon">
-    <p>I'm a friend</p>
+    <form action="/donation-first-time-user" method="post">
+      <input type="image" name="relation" value="friend" alt="Friend icon"></input>
+      <p>I'm a Friend</p>
+    </form>
   </article>
 </section>
