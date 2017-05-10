@@ -1,6 +1,6 @@
 // var server = require('stripe');
 
-var stripe = Stripe('pk_test_zzdvAwrOg37SAhRt6yik1LTu'); // update with real API key
+var stripe = Stripe('pk_test_pvmlq2LM897tcRGgK5nNuSM4'); // update with real API key
 var elements = stripe.elements(); // create a new instance of elements
 
 
