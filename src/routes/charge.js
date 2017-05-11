@@ -11,7 +11,7 @@ module.exports = {
     const stripeToken = req.payload.stripeToken;
     const userCredentials = req.auth.credentials;
     const emailAddress = req.payload.email;
-    const donationAmount = req.auth.credentials.data.amount;
+    const donationAmount = req.auth.credentials.donation.amount;
 
     doesCustomerExistInDB(userCredentials, (err, result) => {
       if (err) {
