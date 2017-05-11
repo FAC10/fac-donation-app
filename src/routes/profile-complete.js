@@ -8,7 +8,7 @@ module.exports = {
       if (err) {
         console.log(err, 'there is an error');
       } else {
-        reply.view('profile-complete', { res });
+        reply.view('profile-complete', { data: req.auth.credentials });
       }
     });
   },
