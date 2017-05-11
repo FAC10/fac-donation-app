@@ -1,11 +1,9 @@
 {{> header}}
 
-<main class="main">
-  {{#each donations}}
-    <article class="blogpost">
-     <h1 class="donation__amount">{{this.title}}</h1>
-     <p class="blogpost__body"> {{this.body}} </p>
-      <p>{{this.username}}</p>
-    </article>
-  {{/each}}
-</main>
+<h2>My donations</h2>
+
+{{#each donations}}
+  <div class="display-donations">
+    £{{this.amount}}
+  </div>
+{{/each}}
