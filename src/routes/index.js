@@ -13,4 +13,5 @@ module.exports = [
   require('./profile-select-relation'),
   require('./profile-complete'),
   require('./donation-first-time-user'),
+  require('./lets-get-started'),
 ];
