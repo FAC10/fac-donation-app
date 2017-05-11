@@ -17,7 +17,12 @@ module.exports = {
           if (err) {
             console.log(err);
           } else {
-            reply.view('display-donations', { donations: result.data, data: req.auth.credentials });
+            const donationObjectsArray = result.data;
+            const donationsArray = [];
+            donationObjectsArray.forEach((donation) => {
+              return donationsArray.push(donation.amount / 100);
+            });
+            reply.view('display-donations', { donationsArray, data: req.auth.credentials });
           }
         });
       }
