@@ -1,5 +1,3 @@
-// const stripeCharge = require('../lib/charge.js');
-const stripeCustomer = require('../lib/create-customer.js');
 const doesCustomerExistInDB = require('../lib/doesCustomerExistInDB.js');
 const chargeRepeatCustomer = require('../lib/chargeRepeatCustomer');
 const saveStripeIdToDB = require('../lib/saveStripeIdToDB.js');
