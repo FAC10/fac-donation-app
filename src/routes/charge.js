@@ -32,9 +32,9 @@ module.exports = {
                 chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
                   if (err) {
                     console.log(err);
-                    reply('unable to charge user');
+                    reply.view('payment-failure');
                   } else {
-                    reply('success1!!!');
+                    reply.view('payment-success');
                   }
                 });
               }
@@ -45,13 +45,11 @@ module.exports = {
         const stripe_id = result.stripe_id;
         chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
           if (err) {
-            reply('error, charge not gone through, they dont have any money.')
+            reply.view('payment-failure')
           } else {
-            // console.log(result);
-            reply('success!!!!')
+            reply.view('payment-success')
           }
         });
-        // just charge user
       }
     });
   },
