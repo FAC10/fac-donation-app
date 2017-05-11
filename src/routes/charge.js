@@ -32,9 +32,9 @@ module.exports = {
                 chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
                   if (err) {
                     console.log(err);
-                    reply.view('payment-failure');
+                    reply.view('payment-failure', { data: req.auth.credentials });
                   } else {
-                    reply.view('payment-success');
+                    reply.view('payment-success', { data: req.auth.credentials });
                   }
                 });
               }
@@ -45,9 +45,9 @@ module.exports = {
         const stripe_id = result.stripe_id;
         chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
           if (err) {
-            reply.view('payment-failure')
+            reply.view('payment-failure', { data: req.auth.credentials });
           } else {
-            reply.view('payment-success')
+            reply.view('payment-success', { data: req.auth.credentials });
           }
         });
       }
