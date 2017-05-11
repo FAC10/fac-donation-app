@@ -1,0 +1,26 @@
+<section>
+  <img class="avatar" src="{{data.avatar_url}}" alt="Your profile picture">
+  <p>Welcome, {{data.username}}!</p>
+</section>
+
+<section>
+  <p>We have a few questions... Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+</section>
+
+<section>
+  <header>Are you an alumni or a friend?</header>
+  <article class="donor-type donor-type--alum">
+    <form action="/profile-select-cohort"  method="post">
+      <input type="image" name="relation" value="alumni" alt="Alumni icon">
+    </input>
+    <p>I'm an Alum</p>
+    </form>
+  </article>
+
+  <article class="donor-type donor-type--friend">
+    <form action="/donation-first-time-user" method="post">
+      <input type="image" name="relation" value="friend" alt="Friend icon"></input>
+      <p>I'm a Friend</p>
+    </form>
+  </article>
+</section>
