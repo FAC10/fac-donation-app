@@ -8,30 +8,36 @@
   <a href="#">change</a>
 </section>
 
-<section class='profile-cohort profile-cohort--location'>
-  <header>Which campus did you study at?</header>
-  <div class="location">
-    <div class="location-image">
-      <img class="location-image__img" src="" alt="Photo of London">
-    </div>
-    <p class='location__name'>London</p>
-  </div>
-  <div class="location">
-    <div class="location-image">
-      <img class="location-image__img" src="" alt="Photo of Nazareth">
-    </div>
-    <p class='location__name'>Nazareth</p>
-  </div>
-</section>
 
-<section class='profile-cohort'>
-  <header class='profile-cohort__header'>Which cohort were you on?</header>
-    <div class="profile-cohort__number">FAC1</div>
-    <div class="profile-cohort__number">FAC2</div>
-    <div class="profile-cohort__number">FAC3</div>
-    <div class="profile-cohort__number">FAC4</div>
-</section>
+<form action="/profile-complete" method="post">
+  <section class='profile-cohort profile-cohort--location'>
+    <header>Which campus did you study at?</header>
+    <div class="location">
+      <div class="location-image">
+        <!-- <img class="location-image__img" src="" alt="Photo of London"> -->
+        <input class="profile-cohort__number" name="facLocation" value="London" type="radio">London</input>
+      </div>
+      <!-- <p class='location__name'>London</p> -->
+    </div>
+    <div class="location">
+      <div class="location-image">
+        <!-- <img class="location-image__img" src="" alt="Photo of Nazareth"> -->
+        <input class="profile-cohort__number" name="facLocation" value="Nazareth" type="radio">Nazareth</input>
+      </div>
+      <!-- <p class='location__name'>Nazareth</p> -->
+    </div>
+  </section>
 
-<section class=''>
-  <button class='next-button' type="button" name="next-button">Next</button>
-</section>
+  <section class='profile-cohort'>
+    <header class='profile-cohort__header'>Which cohort were you on?</header>
+      <input class="profile-cohort__number" name="facCohort" value="FAC1" type="radio">FAC1</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC2" type="radio">FAC2</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC3" type="radio">FAC3</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC4" type="radio">FAC4</input>
+  </section>
+
+  <section class=''>
+    <button class="next-button" type="submit">Next</button>
+  </section>
+
+</form>
