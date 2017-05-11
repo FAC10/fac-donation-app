@@ -1,9 +1,13 @@
 <section>
-  <p>you are making a donation of X</p>
+  <p>You are making a one-off donation of £{{data.amount}}.</p>
   <!-- pipe in stuff -->
 </section>
 
   <form action="/charge" method="post" id="payment-form">
+
+    <label for="emailAddress">Email address:</label>
+      <input id="emailAddress" type="email" name="email" value="">
+
     <div class="form-row">
       <label for="card-element">
         Credit or debit card
