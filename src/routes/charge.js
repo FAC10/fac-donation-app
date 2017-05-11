@@ -21,6 +21,7 @@ module.exports = {
         createNewCustomer(stripeToken, (err, result) => {
           const stripe_id = result;
           if (err) {
+            console.log(err);
             reply('unable to create new customer');
           } else {
             saveStripeIdToDB(stripe_id, userCredentials, (err, result) => {

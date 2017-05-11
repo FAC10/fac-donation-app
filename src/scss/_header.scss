@@ -1,0 +1,19 @@
+.header {
+  &--welcome {
+    background-color: $background-header;
+    color: $text-header;
+    min-height: 4rem;
+    padding-top: 0;
+  }
+  &__github-avatar-container {
+    height: 100%;
+  }
+  &__github-avatar {
+    max-height: 100%;
+    max-width: 8rem;
+  }
+  &__user-message {
+    // font-family: $header-text-font;
+
+  }
+}

@@ -8,7 +8,7 @@ module.exports = {
       if (err) {
         console.log(err, 'there is an error');
       } else {
-        reply.view('profile-select-cohort', { res });
+        reply.view('profile-select-cohort', { data: req.auth.credentials });
       }
     });
   },

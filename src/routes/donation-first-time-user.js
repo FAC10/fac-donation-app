@@ -8,7 +8,7 @@ module.exports = {
       if (err) {
         console.log(err, 'there is an error');
       } else {
-        reply.view('donation-first-time-user', { res });
+        reply.view('donation-first-time-user', { data: req.auth.credentials });
       }
     })
   },

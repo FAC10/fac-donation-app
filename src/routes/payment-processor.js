@@ -1,5 +1,5 @@
 module.exports = {
-  method: 'GET',
+  method: 'POST',
   path: '/payment-processor',
   handler: (req, reply) => {
     reply.view('payment-processor');
