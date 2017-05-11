@@ -1,44 +1,65 @@
-.profile-cohort {
-  min-height: 15rem;
+.profile-cohort-form {
+  min-height: 50rem;
+  background: red;
+}
 
-  &--location {
-    font-size: 0;
-  }
+.profile-cohort {
 
   &__header {
-    color: $text-emphasis;
-    margin: 2rem;
+    text-align: center;
   }
 
-  &__number {
-    background-color: $element-emphasis;
-    color: $element-emphasis-text;
-    display: inline;
-    padding: 1rem;
+  &--location {
+    // background: blue;
+    min-height: 30em;
+    text-align: center;
+
+  }
+
+  &--cohort {
+    // background: yellow;
+    min-height: 30em;
   }
 }
 
+.fac-cohort-number {
+  text-align: center;
+}
+
+
+
+// .profile-cohort {
+//   min-height: 15rem;
+//
+//   &--location {
+//     font-size: 0;
+//   }
+//
+//   &__header {
+//     color: $text-emphasis;
+//     margin: 2rem;
+//   }
+//
+//   &__number {
+//     background-color: $element-emphasis;
+//     color: $element-emphasis-text;
+//     display: inline;
+//     padding: 1rem;
+//   }
+// }
+//
 .next-button {
   background-color: $element-emphasis;
   color: $element-emphasis-text;
   padding: 10px 30px;
 }
 
-.location {
-  display: inline-block;
-  font-size: 1rem;
-  width: 50%;
+input[type=radio] + label {
+    visibility:hidden;
+}
 
-  .location-image {
-    width: 100%;
-
-    &__img {
-      width: 100%;
-    }
-  }
-
-  &__name {
-    display: inline-block;
-    width: 100%;
-  }
+input[type=radio]:checked + label{
+    visibility:hidden;
+    color: red;
+    font-style: normal;
 }
