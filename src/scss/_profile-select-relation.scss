@@ -1,0 +1,16 @@
+.choose-fac-relation {
+  height: 5rem;
+
+  &__header {
+    text-align: center;
+  }
+}
+
+.donor-type-container {
+  height: 50em;
+
+  .donor-type {
+    min-height: 50%;
+    text-align: center;
+  }
+}
