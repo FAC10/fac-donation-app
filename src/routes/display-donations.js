@@ -17,14 +17,10 @@ module.exports = {
           if (err) {
             console.log(err);
           } else {
-            console.log('yayy', result.data);
-            reply.view('display-donations', { donations: result.data })
-            // then use this result (array of charge objects) to display customer charges (will need to reply with the info in a view);
+            reply.view('display-donations', { donations: result.data, data: req.auth.credentials });
           }
         });
       }
     });
-
-    // reply.view('display-donations', { result });
   },
-}
+};
