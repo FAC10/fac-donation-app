@@ -1,26 +1,34 @@
-<section>
-  <p>You are making a one-off donation of £{{data.amount}}.</p>
+{{> header }}
+
+<section class="payment-processor__header row">
+  <h2>You are making a donation of £{{data.amount}}</h2>
   <!-- pipe in stuff -->
 </section>
 
-  <form action="/charge" method="post" id="payment-form">
-
-    <label for="emailAddress">Email address:</label>
-      <input id="emailAddress" type="email" name="email" value="">
-
-    <div class="form-row">
-      <label for="card-element">
-        Credit or debit card
-      </label>
-      <div id="card-element">
-        <!-- a Stripe Element will be inserted here. -->
-      </div>
-
-      <!-- Used to display form errors -->
-      <div id="card-errors"></div>
+  <form class="stripe-form" action="/charge" method="post" id="payment-form">
+    <div class="group">
+    <label class="stripe-label">
+      <span>Name</span>
+      <input name="cardholder-name" class="field" placeholder="Jane Doe" />
+    </label>
+    <label class="stripe-label">
+      <span>Phone</span>
+      <input class="field" placeholder="(123) 456-7890" type="tel" />
+    </label>
+  </div>
+  <div class="group">
+    <label class="stripe-label">
+      <span>Card</span>
+      <div id="card-element" class="field"></div>
+    </label>
+  </div>
+  <button class="stripe-button" type="submit">Pay £{{data.amount}}</button>
+  <div class="outcome">
+    <div class="error"></div>
+    <div class="success">
+      Success! Your Stripe token is <span class="token"></span>
     </div>
-
-    <button>Submit Payment</button>
-  </form>
+  </div>
+</form>
 
   <script src="./lib/payment-processor.js"></script>
