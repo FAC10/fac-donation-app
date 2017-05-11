@@ -32,4 +32,19 @@ postData.insertFACRelation = (reqPayload, credentials, callback) => {
 
 }
 
+postData.insertFACCohort = (reqPayload, credentials, callback) => {
+
+  const query = `UPDATE users
+                 SET fac_cohort='${reqPayload.facCohort}', fac_location='${reqPayload.facLocation}'
+                 WHERE github_username = '${credentials.username}'`;
+
+  db_connection.query(query, (err, res) => {
+    if (err) {
+      return callback(err, null);
+    } else {
+      callback(null, res)
+    }
+  });
+}
+
 module.exports = postData;

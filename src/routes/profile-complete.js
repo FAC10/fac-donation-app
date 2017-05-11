@@ -1,7 +1,15 @@
+const postdata = require('../database/postData.js');
+
 module.exports = {
-  method: 'GET',
+  method: 'POST',
   path: '/profile-complete',
   handler: (req, reply) => {
-    reply.view('profile-complete');
-  }
-}
+    postdata.insertFACCohort(req.payload, req.auth.credentials, (err, res) => {
+      if (err) {
+        console.log(err, 'there is an error');
+      } else {
+        reply.view('profile-complete', { res });
+      }
+    });
+  },
+};
