@@ -2,6 +2,6 @@ module.exports = {
   method: 'GET',
   path: '/lets-get-started',
   handler: (req, reply) => {
-    reply.view('donation-first-time-user');
+    reply.view('donation-first-time-user', { data: req.auth.credentials });
   }
 }
