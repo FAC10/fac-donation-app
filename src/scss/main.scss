@@ -1,10 +1,10 @@
 // MUST BE IMPORTED FIRST
 @import 'normalize';
 @import 'variables';
-
+@import 'responsive-grid';
 
 // IMPORT ORDER NOT SO IMPORTANT
 @import 'header';
-@import 'profile-select-cohort';
 @import 'test';
-@import 'responsive-grid';
+@import 'profile-select-cohort';
+@import 'donation-first-time-user';
