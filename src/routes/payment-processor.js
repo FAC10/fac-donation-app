@@ -3,8 +3,8 @@ module.exports = {
   path: '/payment-processor',
   handler: (req, reply) => {
     req.cookieAuth.set(Object.assign({},req.auth.credentials,{
-      data: req.payload,
+      donation: req.payload,
     }))
-    reply.view('payment-processor', { data: req.payload });
+    reply.view('payment-processor', { donation: req.payload, data: req.auth.credentials });
   },
 };
