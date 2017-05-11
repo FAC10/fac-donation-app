@@ -7,10 +7,11 @@ module.exports = {
   method: 'POST',
   path: '/charge',
   handler: (req, reply) => {
-    console.log('>>>>>>>>>>>>>>>>>>', req.payload);
     // we get a req.payload which has a token
     const stripeToken = req.payload.stripeToken;
     const userCredentials = req.auth.credentials;
+    const emailAddress = req.payload.email;
+    const donationAmount = req.auth.credentials.data.amount;
 
     doesCustomerExistInDB(userCredentials, (err, result) => {
       if (err) {
@@ -18,7 +19,7 @@ module.exports = {
         reply('Broken');
       } else if (result === false) {
         // create customer id and charge user
-        createNewCustomer(stripeToken, (err, result) => {
+        createNewCustomer(emailAddress, stripeToken, (err, result) => {
           const stripe_id = result;
           if (err) {
             console.log(err);
@@ -28,7 +29,7 @@ module.exports = {
               if (err) {
                 reply('unable to save stripe id to db');
               } else {
-                chargeRepeatCustomer(stripe_id, (err, result) => {
+                chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
                   if (err) {
                     console.log(err);
                     reply('unable to charge user');
@@ -42,11 +43,11 @@ module.exports = {
         });
       } else {
         const stripe_id = result.stripe_id;
-        chargeRepeatCustomer(stripe_id, (err, result) => {
+        chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
           if (err) {
             reply('error, charge not gone through, they dont have any money.')
           } else {
-            console.log(result);
+            // console.log(result);
             reply('success!!!!')
           }
         });
