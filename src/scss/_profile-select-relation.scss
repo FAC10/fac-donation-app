@@ -1,5 +1,10 @@
+.profile-select-relation-container {
+  min-height: 100%;
+  text-align: center;
+}
+
 .choose-fac-relation {
-  height: 5rem;
+  // height: 5rem;
 
   &__header {
     text-align: center;
@@ -7,10 +12,15 @@
 }
 
 .donor-type-container {
-  height: 50em;
+  // height: 50em;
 
   .donor-type {
     min-height: 50%;
     text-align: center;
   }
+}
+
+.choose-relation-img {
+  height: 10rem;
+  width: 10rem;
 }
