@@ -11,7 +11,7 @@ module.exports = {
     const stripeToken = req.payload.stripeToken;
     const userCredentials = req.auth.credentials;
     const emailAddress = req.payload.email;
-    const donationAmount = req.auth.credentials.data.amount;
+    const donationAmount = req.auth.credentials.donation.amount;
 
     doesCustomerExistInDB(userCredentials, (err, result) => {
       if (err) {
@@ -32,9 +32,9 @@ module.exports = {
                 chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
                   if (err) {
                     console.log(err);
-                    reply('unable to charge user');
+                    reply.view('payment-failure', { data: req.auth.credentials });
                   } else {
-                    reply('success1!!!');
+                    reply.view('payment-success', { data: req.auth.credentials });
                   }
                 });
               }
@@ -45,13 +45,11 @@ module.exports = {
         const stripe_id = result.stripe_id;
         chargeRepeatCustomer(donationAmount, stripe_id, (err, result) => {
           if (err) {
-            reply('error, charge not gone through, they dont have any money.')
+            reply.view('payment-failure', { data: req.auth.credentials });
           } else {
-            // console.log(result);
-            reply('success!!!!')
+            reply.view('payment-success', { data: req.auth.credentials });
           }
         });
-        // just charge user
       }
     });
   },

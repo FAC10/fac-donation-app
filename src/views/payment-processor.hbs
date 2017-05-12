@@ -1,7 +1,7 @@
 {{> header }}
 
 <section class="payment-processor__header row">
-  <h2>You are making a donation of £{{data.amount}}</h2>
+  <h2>You are making a donation of £{{donation.amount}}</h2>
   <!-- pipe in stuff -->
 </section>
 
@@ -22,7 +22,7 @@
       <div id="card-element" class="field"></div>
     </label>
   </div>
-  <button class="stripe-button" type="submit">Pay £{{data.amount}}</button>
+  <button class="stripe-button" type="submit">Pay £{{donation.amount}}</button>
   <div class="outcome">
     <div class="error"></div>
     <div class="success">
