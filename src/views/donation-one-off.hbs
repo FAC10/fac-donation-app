@@ -1,41 +1,45 @@
 {{> header}}
 
-<h2 class="donation donation__title">Make a gift</h2>
+<section class="donation-one-off-container">
+  <h2 class="donation donation__title">Make a gift</h2>
 
-<form class="donation donation__form" action="/payment-processor" method='post'>
-  <header class="donation__header">Please select an amount</header>
-  <div class="donation__container">
-    <div class="donation__amount">
-      <label for="100">100</label>
-      <input id="100" name="amount" value="100" type="radio" required>
-    </div>
-    <div class="donation__amount">
-      <label for="150">150</label>
-      <input id="150" name="amount" value="150" type="radio">
-    </div>
-    <div class="donation__amount">
-      <label for="200">200</label>
-      <input id="200" name="amount" value="200" type="radio">
-    </div>
-    <div class="donation__amount">
-      <label for="250">250</label>
-      <input id="250" name="amount" value="250" type="radio">
-    </div>
-    <div class="donation__amount">
-      <label for="300">300</label>
-      <input id="300" name="amount" value="300" type="radio">
-    </div>
-    <div class="donation__amount">
-      <label for="500">500</label>
-      <input id="500" name="amount" value="500" type="radio">
-    </div>
-  </div>
-  <!-- <div class="donation__amount">
-    <label for="other">Other amount</label>
-    <input type="text" name="amount" id="other" value="" placeholder="Enter amount like this £00.00">
-  </div> -->
-  <section class="">
-    <button class="button button--payment" type="submit">Take me to payment</button>
-  </section>
+  <form class="donation donation__form" action="/payment-processor" method='post'>
 
-</form>
+    <header class="donation__header"><h2>Please select an amount</h2></header>
+
+    <div class="donation__container">
+      <div class="donation__amount">
+        <input id="100" name="amount" value="100" type="radio" required>
+        <label for="100">£100</label>
+      </div>
+      <div class="donation__amount">
+        <input id="150" name="amount" value="150" type="radio">
+        <label for="150">£150</label>
+      </div>
+      <div class="donation__amount">
+        <input id="200" name="amount" value="200" type="radio">
+        <label for="200">£200</label>
+      </div>
+      <div class="donation__amount">
+        <input id="250" name="amount" value="250" type="radio">
+        <label for="250">£250</label>
+      </div>
+      <div class="donation__amount">
+        <input id="300" name="amount" value="300" type="radio">
+        <label for="300">£300</label>
+      </div>
+      <div class="donation__amount">
+        <input id="500" name="amount" value="500" type="radio">
+        <label for="500">£500</label>
+      </div>
+    </div>
+    <!-- <div class="donation__amount">
+      <label for="other">Other amount</label>
+      <input type="text" name="amount" id="other" value="" placeholder="Enter amount like this £00.00">
+    </div> -->
+    <section class="row">
+      <button class="button button--payment" type="submit"><h2>Take me to payment</h2></button>
+    </section>
+
+  </form>
+</section>

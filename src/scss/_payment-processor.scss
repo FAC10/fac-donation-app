@@ -1,10 +1,18 @@
+.payment-processor-container {
+  min-height: 100%;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
 .payment-processor__header {
   text-align: center;
 }
 
 .stripe-form {
-    width: 480px;
+    // width: 480px;
     margin: 20px auto;
+    width: 100%;
 
   .group {
     background: white;
@@ -20,7 +28,7 @@
     font-weight: 300;
     height: 40px;
     line-height: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
     display: block;
   }
 
@@ -29,7 +37,7 @@
   }
 
   .stripe-label > span {
-    width: 20%;
+    width: 15%;
     text-align: right;
     float: left;
   }
@@ -43,7 +51,7 @@
     padding-right: 10px;
     padding-left: 10px;
     cursor: text;
-    width: 70%;
+    width: 85%;
     height: 40px;
     float: right;
   }

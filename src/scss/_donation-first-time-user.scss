@@ -1,15 +1,9 @@
-.donation-type {
-  height: 50em;
-  background-color: pink;
+.donation-first-time-user-container {
+  min-height: 100%;
+  text-align: center;
+}
 
-  &__regular {
-    min-height: 50%;
-    background: yellow;
-    text-align: center;
-  }
-  &__one-off {
-    min-height: 50%;
-    background: red;
-    text-align: center;
-  }
+.choose-donation-type-icon {
+  height: 10rem;
+  width: 10rem;
 }
