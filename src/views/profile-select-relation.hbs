@@ -1,26 +1,26 @@
-<section>
-  <img class="avatar" src="{{data.avatar_url}}" alt="Your profile picture">
-  <p>Welcome, {{data.username}}!</p>
-</section>
+{{> header}}
 
-<section>
-  <p>We have a few questions... Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-</section>
+  <section class="choose-fac-relation row">
+    <header class="choose-fac-relation__header col-xs-12">
+      <h2>Are you an alumni or a friend?</h2>
+    </header>
+  </section>
 
-<section>
-  <header>Are you an alumni or a friend?</header>
-  <article class="donor-type donor-type--alum">
-    <form action="/profile-select-cohort"  method="post">
-      <input type="image" name="relation" value="alumni" alt="Alumni icon">
-    </input>
-    <p>I'm an Alum</p>
-    </form>
-  </article>
+  <section class="donor-type-container row">
+    <article class="donor-type donor-type--alum col-xs-12 col-md-6">
+      <form class="" action="/profile-select-cohort"  method="post">
+        <input type="image" name="relation" value="alumni" alt="Alumni icon">
+        <!-- IMAGE NEEDED -->
+        </input>
+        <h2>I'm an Alum</h2>
+      </form>
+    </article>
 
-  <article class="donor-type donor-type--friend">
-    <form action="/donation-first-time-user" method="post">
-      <input type="image" name="relation" value="friend" alt="Friend icon"></input>
-      <p>I'm a Friend</p>
-    </form>
-  </article>
-</section>
+    <article class="donor-type donor-type--friend col-xs-12 col-md-6">
+      <form class="" action="/donation-first-time-user" method="post">
+        <input type="image" name="relation" value="friend" alt="Friend icon"></input>
+        <h2>I'm a Friend</h2>
+        <!-- IMAGE NEEDED -->
+      </form>
+    </article>
+  </section>

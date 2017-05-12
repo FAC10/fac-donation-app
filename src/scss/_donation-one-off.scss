@@ -1,0 +1,35 @@
+.donation {
+
+  text-align: center;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__form {
+    background-color: yellow;
+    min-height: 26rem;
+  }
+
+  &__header {
+    padding: 2rem;
+  }
+
+  &__amount {
+    // background: purple;
+    color: grey;
+
+    input:checked {
+      color: #f00;
+      font-style: normal;
+    }
+  }
+}
+
+.button {
+  position: fixed;
+  bottom: 4rem;
+  font-family: $button-text-font;
+  text-align: center;
+}

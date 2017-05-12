@@ -1,4 +1,14 @@
+// MUST BE IMPORTED FIRST
+@import 'normalize';
 @import 'variables';
-@import 'profile-select-cohort';
-@import 'test';
 @import 'responsive-grid';
+
+// IMPORT ORDER NOT SO IMPORTANT
+@import 'header';
+@import 'test';
+@import 'profile-select-cohort';
+@import 'donation-first-time-user';
+@import 'donation-one-off';
+@import 'profile-select-relation';
+@import 'profile-complete';
+@import 'payment-processor';

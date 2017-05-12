@@ -1,7 +1,10 @@
 module.exports = {
-  method: 'GET',
+  method: 'POST',
   path: '/payment-processor',
   handler: (req, reply) => {
-    reply.view('payment-processor');
-  }
-}
+    req.cookieAuth.set(Object.assign({},req.auth.credentials,{
+      donation: req.payload,
+    }))
+    reply.view('payment-processor', { donation: req.payload, data: req.auth.credentials });
+  },
+};

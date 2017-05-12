@@ -1,42 +1,62 @@
-<section class='header--welcome'>
-  <img class="avatar" src="" alt="Your profile picture">
-  <p>Welcome, NAME!</p>
-</section>
+{{> header}}
 
-<section class=''>
-  <p>I'm a Founders &amp; Coders alumni</p>
+<!-- <section class=''>
+  <p>I'm a Founders &amp; Coders {{data.fac_relation}}</p>
   <a href="#">change</a>
-</section>
+</section> -->
 
 
-<form action="/profile-complete" method="post">
-  <section class='profile-cohort profile-cohort--location'>
-    <header>Which campus did you study at?</header>
-    <div class="location">
+<form class="profile-cohort-form" action="/profile-complete" method="post">
+
+  <section class='profile-cohort profile-cohort--location row'>
+    <header class="profile-cohort__header col-xs-12">
+      <h2>Which campus did you study at?</h2>
+    </header>
+
+    <article class="location col-xs-6">
       <div class="location-image">
         <!-- <img class="location-image__img" src="" alt="Photo of London"> -->
-        <input class="profile-cohort__number" name="facLocation" value="London" type="radio">London</input>
+        <input class="profile-cohort__number" name="facLocation" value="London" type="radio">
+          London
+        </input>
       </div>
       <!-- <p class='location__name'>London</p> -->
-    </div>
-    <div class="location">
+    </article>
+
+    <article class="location col-xs-6">
       <div class="location-image">
         <!-- <img class="location-image__img" src="" alt="Photo of Nazareth"> -->
-        <input class="profile-cohort__number" name="facLocation" value="Nazareth" type="radio">Nazareth</input>
+        <input class="profile-cohort__number" name="facLocation" value="Nazareth" type="radio">
+          Nazareth
+        </input>
       </div>
       <!-- <p class='location__name'>Nazareth</p> -->
-    </div>
+    </article>
   </section>
 
-  <section class='profile-cohort'>
-    <header class='profile-cohort__header'>Which cohort were you on?</header>
-      <input class="profile-cohort__number" name="facCohort" value="FAC1" type="radio">FAC1</input>
+  <section class='profile-cohort profile-cohort--cohort'>
+    <header class='profile-cohort__header col-xs-12'>
+      <h2>Which cohort were you on?</h2>
+    </header>
+
+    <article class="fac-cohort-number">
+      <label for="fac1">FAC1</label>
+      <input class="profile-cohort__number" name="facCohort" value="FAC1" type="radio" id="fac1"></input>
+
       <input class="profile-cohort__number" name="facCohort" value="FAC2" type="radio">FAC2</input>
       <input class="profile-cohort__number" name="facCohort" value="FAC3" type="radio">FAC3</input>
       <input class="profile-cohort__number" name="facCohort" value="FAC4" type="radio">FAC4</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC5" type="radio">FAC5</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC6" type="radio">FAC6</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC7" type="radio">FAC7</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC8" type="radio">FAC8</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC9" type="radio">FAC9</input>
+      <input class="profile-cohort__number" name="facCohort" value="FAC10" type="radio">FAC10</input>
+      <input class="profile-cohort__number" name="facCohort" value="FACN1" type="radio">FACN1</input>
+    </article>
   </section>
 
-  <section class=''>
+  <section class="row">
     <button class="next-button" type="submit">Next</button>
   </section>
 
