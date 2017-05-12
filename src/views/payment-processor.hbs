@@ -1,34 +1,36 @@
 {{> header }}
 
-<section class="payment-processor__header row">
-  <h2>You are making a donation of £{{donation.amount}}</h2>
-  <!-- pipe in stuff -->
+<section class="payment-processor-container">
+  <section class="payment-processor__header row">
+    <h2>You are making a donation of £{{donation.amount}}</h2>
+    <!-- pipe in stuff -->
+  </section>
+
+    <form class="stripe-form" action="/charge" method="post" id="payment-form">
+      <div class="group">
+      <label class="stripe-label">
+        <span>Name</span>
+        <input name="cardholder-name" class="field" placeholder="Jane Doe" />
+      </label>
+      <label class="stripe-label">
+        <span>Email</span>
+        <input name="email" class="field" placeholder="jane@doe.com" type="email" />
+      </label>
+    </div>
+    <div class="group">
+      <label class="stripe-label">
+        <span>Card</span>
+        <div id="card-element" class="field"></div>
+      </label>
+    </div>
+    <button class="stripe-button" type="submit">Pay £{{donation.amount}}</button>
+    <div class="outcome">
+      <div class="error"></div>
+      <div class="success">
+        Success! Your Stripe token is <span class="token"></span>
+      </div>
+    </div>
+  </form>
 </section>
 
-  <form class="stripe-form" action="/charge" method="post" id="payment-form">
-    <div class="group">
-    <label class="stripe-label">
-      <span>Name</span>
-      <input name="cardholder-name" class="field" placeholder="Jane Doe" />
-    </label>
-    <label class="stripe-label">
-      <span>Email</span>
-      <input name="email" class="field" placeholder="jane@doe.com" type="email" />
-    </label>
-  </div>
-  <div class="group">
-    <label class="stripe-label">
-      <span>Card</span>
-      <div id="card-element" class="field"></div>
-    </label>
-  </div>
-  <button class="stripe-button" type="submit">Pay £{{donation.amount}}</button>
-  <div class="outcome">
-    <div class="error"></div>
-    <div class="success">
-      Success! Your Stripe token is <span class="token"></span>
-    </div>
-  </div>
-</form>
-
-  <script src="./lib/payment-processor.js"></script>
+    <script src="./lib/payment-processor.js"></script>

@@ -1,5 +1,7 @@
 {{> header}}
 
+<section class="profile-select-relation-container">
+
   <section class="choose-fac-relation row">
     <header class="choose-fac-relation__header col-xs-12">
       <h2>Are you an alumni or a friend?</h2>
@@ -9,18 +11,18 @@
   <section class="donor-type-container row">
     <article class="donor-type donor-type--alum col-xs-12 col-md-6">
       <form class="" action="/profile-select-cohort"  method="post">
-        <input type="image" name="relation" value="alumni" alt="Alumni icon">
-        <!-- IMAGE NEEDED -->
-        </input>
         <h2>I'm an Alum</h2>
+        <input type="image" class="choose-relation-img" src="./assets/fac-grad-img.svg" alt="graphic of founders and coder's alum" name="relation" value="alumni">
+        </input>
       </form>
     </article>
 
     <article class="donor-type donor-type--friend col-xs-12 col-md-6">
       <form class="" action="/donation-first-time-user" method="post">
-        <input type="image" name="relation" value="friend" alt="Friend icon"></input>
         <h2>I'm a Friend</h2>
-        <!-- IMAGE NEEDED -->
+        <input type="image" name="relation" value="friend" class="choose-relation-img" src="./assets/fac-friend-img.svg" alt="graphic of founders and coder's friend"></input>
       </form>
     </article>
   </section>
+
+</section>
