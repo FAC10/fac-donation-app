@@ -1,0 +1,41 @@
+.github-login-button {
+  background: $ourGrey;
+  color: #fff;
+  padding: 1rem;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.github-login-button:hover, .github-login-button:focus {
+transform: scale(1.1);
+}
+
+.github-login-button__img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.github-login-button__text {
+    display: inline;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fac-logo {
+  max-height: 20rem;
+  width: auto;
+  margin-bottom: 2.5rem;
+}
+
+.login-page-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+.login-page__header {
+  padding: 1rem 0 0 0;
+}
