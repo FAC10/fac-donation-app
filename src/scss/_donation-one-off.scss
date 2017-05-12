@@ -1,24 +1,31 @@
-.donation {
+.donation-one-off-container {
+  min-height: 100%;
+  text-align: center;
+}
 
+
+.donation {
   text-align: center;
 
   &__container {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
+    // justify-content: space-around;
+    margin-bottom: 4rem;
   }
 
   &__form {
-    background-color: yellow;
     min-height: 26rem;
   }
 
   &__header {
-    padding: 2rem;
+    padding: 1rem 0 0 0;
   }
 
   &__amount {
     // background: purple;
     color: grey;
+    margin: 0.5rem;
+    font-size: 1.5rem;
 
     input:checked {
       color: #f00;
@@ -28,8 +35,12 @@
 }
 
 .button {
-  position: fixed;
-  bottom: 4rem;
   font-family: $button-text-font;
-  text-align: center;
+  // text-align: center;
+}
+
+.button--payment {
+  background: $element-emphasis;
+  padding: 0 1rem 0 1rem;
+  color: #fff;
 }

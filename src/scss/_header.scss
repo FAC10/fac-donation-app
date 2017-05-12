@@ -10,7 +10,8 @@
   }
   &__github-avatar {
     max-height: 100%;
-    max-width: 8rem;
+    max-width: 5rem;
+    border-radius: 50%;
   }
   &__user-message {
     // font-family: $header-text-font;
