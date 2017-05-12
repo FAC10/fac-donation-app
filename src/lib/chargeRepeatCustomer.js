@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_5vjln3z3FwdABvb229LkatOa');
+const stripe = require('stripe')(process.env.STRIPE_SECRET);
 
 const chargeRepeatCustomer = (donationAmount, stripe_id, callback) => {
   const stripeAmount = donationAmount * 100;
